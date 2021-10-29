@@ -17,10 +17,6 @@ class TestCase(unittest.TestCase):
     def tearDown(self):
         logger.info("#####测试用例运行结束#####")
         
-def suite():
-    suiteTest=unittest.TestSuite()
-    suiteTest.addTest(TestCase("test_login"))
-    return suiteTest
     
 if __name__=="__main__":
     # print(sys.path[-1])
@@ -36,6 +32,4 @@ if __name__=="__main__":
     # runner = TestRunner(suite(),filename=filepath,report_dir="../reports",tester="tester",title="测试报告",desc="测试报告描述",templates=3)
     # runner.run()
     # # runner.send_email(host="smtp.qq.com", port=25, user="857330385@qq.com", password="vejungwmdhxobbej", to_addrs="857330385@qq.com")
-
- 
-    unittest.TextTestRunner(verbosity=2).run(suite()) 
+    unittest.main()
